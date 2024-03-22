@@ -14,6 +14,7 @@ function page() {
       <Header />
       <MultiSelect />
       <Footer />
+      <iframe src="https://codesandbox.io/p/github/tugsef/rick-and-morty/main?workspaceId=6879c928-d089-48c2-b387-6c2dd330749a" className="w-full h-full"></iframe>
     </div>
   );
 }
