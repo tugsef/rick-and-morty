@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 function page() {
   return (
     <div className="h-screen w-full flex flex-col p-10 items-center gap-10">
+      <title>Rick and Morty</title>
       <Header />
       <MultiSelect />
       <Footer />

@@ -1,4 +1,4 @@
-import StoreProvider from "@/Provider/StoreProvider";
+import StoreProvider from "@/provider/StoreProvider";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
