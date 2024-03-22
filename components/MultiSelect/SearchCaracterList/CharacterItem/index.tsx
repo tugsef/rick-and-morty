@@ -5,7 +5,7 @@ import {
 import { Character } from "@/lib/features/characters/initialStateCharacters";
 import { useAppDispatch, useAppSelector } from "@/lib/hook";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 
 function CharacterItem({ item }: { item: Character }) {
   const searchTerm = useAppSelector((state) => state.characters.searchText);
@@ -32,17 +32,16 @@ function CharacterItem({ item }: { item: Character }) {
       dispacth(SELECTEDLIST_REMOVE({ item }));
     }
   };
-  
+
   return (
     <>
-      <div onClick={() => handleOnChange({ item })} className="flex gap-2 p-2 border border-[rgb(151,162,182)] rounded-lg hover:cursor-pointer duration-150 transform hover:scale-105 transition ease-linear " tabIndex={(2*Number(item.id))} onKeyDown={handleKeyDown}>
-        <input
-          type="checkbox"
-          name=""
-          checked={item.added}
-          id=""
-          readOnly
-        />
+      <div
+        onClick={() => handleOnChange({ item })}
+        className="flex gap-2 p-2 border border-[rgb(151,162,182)] rounded-lg hover:cursor-pointer duration-150 transform hover:scale-105 transition ease-linear "
+        tabIndex={2 * Number(item.id)}
+        onKeyDown={handleKeyDown}
+      >
+        <input type="checkbox" name="" checked={item.added} id="" readOnly />
         <div className="flex items-center justify-center object-cover">
           <Image
             className="rounded-xl h-10 w-10"

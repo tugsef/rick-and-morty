@@ -6,14 +6,11 @@ import SearchCaracterList from "./SearchCaracterList";
 function MultiSelect() {
   return (
     <>
-    <main className="w-96 max-h-96  flex flex-col gap-2 relative">
-      <MultiSelectNav  />
-      <SearchCaracterList />
-    </main>
-   
-
+      <main className="w-96 max-h-96  flex flex-col gap-2 relative bg-white">
+        <MultiSelectNav />
+        <SearchCaracterList />
+      </main>
     </>
-    
   );
 }
 

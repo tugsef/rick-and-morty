@@ -1,6 +1,26 @@
 
 # React.js kullanarak multi-select autocomplete component implement
 
+[`Demo`](https://rick-and-morty-pi-bay.vercel.app/):https://rick-and-morty-pi-bay.vercel.app/
+
+
+## Proje Hakkında
+
+- Projede `Nextjs`, `Redux Toolkit`, `Typescrit` ve `Tailwindcss` kullanılmıştır.
+- Sorgular https://rickandmortyapi.com/api/character/?name= ${text} url kullanılarak yapılmıştır
+- Input elementine girilen karakterlerin bulunamaması durumunda
+ 
+```
+{
+"error": "There is nothing here"
+}
+```
+response döner.
+
+- Seçilen karakter listesinde odaklanan karakteri `back` tuşu siler.
+- Arama listesinde seçilen karakteri `enter` seçili karakter listesine ekler. 
+- Arama listesinde seçilen karakteri `back` seçili karakter listesiden siler.
+
 <details><summary><b>Case</b></summary>
 <br/>
 Adcreative.ai frontend developer pozisyonu icin hazirladigimiz bu case'de sizden React.js kullanarak multi-select autocomplete component implement etmenizi istiyoruz.
@@ -15,7 +35,7 @@ Api linki: https://rickandmortyapi.com/documentation/#introduction
 
 
  Ornek tasarım  
-![](assets/multi-select.png)
+![](public/assets/multi-select.png)
 </details>
 
 <details><summary><b>Gereksinimler</b></summary>
@@ -30,9 +50,9 @@ Api linki: https://rickandmortyapi.com/documentation/#introduction
 * Loading state gosterimi
 * Exception handling ve error statelerinin arayuzde gosterilmesi
 * Ve tabi ki yazdiginiz kodun mimarisi, temiz ve okunakli olmasi belki de en onemli kriter olacaktir.
-<br/>
- Ornek tasarım  <br/>  <br/> <img src="assets/multi-select.png"/>
 </details>
+
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 

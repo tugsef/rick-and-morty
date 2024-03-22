@@ -17,7 +17,7 @@ function MultiSelectNav() {
   return (
     <div
       ref={listRef}
-      className="w-full flex flex-wrap p-2  bg-white rounded-xl  border border-[rgb(151,162,182)] shadow-navbarShadow  relative max-h-40 overflow-x-auto"
+      className="w-full flex flex-wrap p-2  bg-[rgb(255,255,255)] rounded-xl  border border-[rgb(151,162,182)] shadow-navbarShadow  relative max-h-40 overflow-x-auto"
     >
       <SelectList />
       <FormInput />
