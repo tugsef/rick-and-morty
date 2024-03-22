@@ -35,12 +35,13 @@ function CharacterItem({ item }: { item: Character }) {
   
   return (
     <>
-      <div onClick={() => handleOnChange({ item })} className="flex gap-2 p-2 border rounded-lg hover:cursor-pointer" tabIndex={(2*Number(item.id))} onKeyDown={handleKeyDown}>
+      <div onClick={() => handleOnChange({ item })} className="flex gap-2 p-2 border border-[rgb(151,162,182)] rounded-lg hover:cursor-pointer duration-150 transform hover:scale-105 transition ease-linear " tabIndex={(2*Number(item.id))} onKeyDown={handleKeyDown}>
         <input
           type="checkbox"
           name=""
           checked={item.added}
           id=""
+          readOnly
         />
         <div className="flex items-center justify-center object-cover">
           <Image
@@ -49,7 +50,6 @@ function CharacterItem({ item }: { item: Character }) {
             width={30}
             height={30}
             alt={item.name}
-            placeholder="blur"
             blurDataURL="data:image/png;base64, iVBORw0KGgoAAAAANSUhEUgAAAAEAAAABCAYAAAAAfFcSJAAAADULEQVR42mP8/5/hPwAIAgL/4d1j8wAAAABJRU5ErkJggg== "
           />
         </div>
@@ -59,7 +59,7 @@ function CharacterItem({ item }: { item: Character }) {
             {parts.map((part, index) => {
               if (part.toLowerCase() === searchTerm.toLowerCase()) {
                 return (
-                  <span key={index} style={{ color: "red" }}>
+                  <span key={index} className="font-extrabold">
                     {part}
                   </span>
                 );

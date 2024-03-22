@@ -18,11 +18,11 @@ function SelectedItem({ item }: { item: Character }) {
   };
   return (
     <div tabIndex={1} onKeyDown={handleKeyDown}>
-      <div className="flex gap-1 text-xs text-white justify-center items-center bg-blue-500 px-1 rounded-lg p-2">
+      <div className="flex gap-1 text-xs  justify-center items-center bg-[rgb(227,231,239)] px-1 rounded-lg p-2">
         <span className="truncate">{item.name}</span>
         <button
           onClick={() => handleOnClick({ item })}
-          className="text-white text-center  bg-slate-600 px-1  rounded-sm"
+          className=" text-center  bg-[rgb(151,162,182)] px-1  rounded-sm"
           tabIndex={-1}
         >
           x

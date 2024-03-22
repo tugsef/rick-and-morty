@@ -12,7 +12,7 @@ function SelectList() {
 
   return (
     <div >
-      <ul className='flex gap-1 max-w-60 overflow-auto'>
+      <ul className='flex flex-wrap  gap-1 max-w-60'>
         {
           selectedList.map((item)=><SelectedItem key={item.id} item={item}/>)
         }
