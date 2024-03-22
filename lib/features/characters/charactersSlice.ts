@@ -11,11 +11,18 @@ export const charactersSlice = createSlice({
   initialState: caractersState,
   reducers: {
     SELECTEDLIST_ADD: (state, action: PayloadAction<{ item: Character }>) => {
-      state.selectedCharacters.push({ ...action.payload.item });
       state.items = state.items.map((ch) => {
         if (ch.id === action.payload.item.id) return { ...ch, added: true };
         return ch;
       }) as Character[];
+
+      let exists = state.selectedCharacters.some(
+        (ch) => ch.id === action.payload.item.id
+      );
+
+      if (!exists) {
+        state.selectedCharacters.push({ ...action.payload.item });
+      }
     },
     SELECTEDLIST_REMOVE: (
       state,
@@ -31,7 +38,7 @@ export const charactersSlice = createSlice({
     },
     SELECTEDLIST_ALL_REMOVE: (state) => {
       state.selectedCharacters = [];
-      state.searchText=""
+      state.searchText = "";
     },
 
     SEARCH_TEXT: (state, action: PayloadAction<{ text: string }>) => {
@@ -39,7 +46,7 @@ export const charactersSlice = createSlice({
     },
     ITEMS_ALL_REMOVE: (state) => {
       state.items = [];
-      state.searchText=""
+      state.searchText = "";
     },
   },
 
