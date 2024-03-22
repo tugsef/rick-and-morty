@@ -4,8 +4,10 @@ import {
   ITEMS_ALL_REMOVE,
   SEARCH_TEXT,
   SELECTEDLIST_ALL_REMOVE,
+  SELECTEDLIST_REMOVE,
+  selectFiltredItems,
 } from "@/lib/features/characters/charactersSlice";
-import { getSearchCharactersAsync } from "@/lib/features/characters/initialStateCharacters";
+import { Character, getSearchCharactersAsync } from "@/lib/features/characters/initialStateCharacters";
 import { useAppDispatch, useAppSelector } from "@/lib/hook";
 import React, { ChangeEvent } from "react";
 
@@ -14,7 +16,8 @@ function FormInput() {
   const isloading = useAppSelector((state) => state.characters.isLoading);
   const text = useAppSelector((state) => state.characters.searchText);
   const error = useAppSelector((state) => state.characters.error);
-
+  const items = useAppSelector(selectFiltredItems) as Character[];
+  const lenghtText = text.length;
   const handleOnChange = async (event: ChangeEvent<HTMLInputElement>) => {
     let text = event.target.value;
     dispatch(SEARCH_TEXT({ text }));
