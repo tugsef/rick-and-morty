@@ -6,8 +6,6 @@ import React from "react";
 
 function SelectedItem({ item }: { item: Character }) {
   const dispacth = useAppDispatch();
-  console.log(item.added);
-
   const handleOnClick = ({ item }: { item: Character }) => {
     dispacth(SELECTEDLIST_REMOVE({ item }));
   };

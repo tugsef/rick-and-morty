@@ -58,8 +58,6 @@ export const charactersSlice = createSlice({
         state.error = null;
       })
       .addCase(getSearchCharactersAsync.fulfilled, (state, action) => {
-        console.log(action.payload);
-
         state.items = action.payload;
         state.isLoading = false;
       })
@@ -67,8 +65,6 @@ export const charactersSlice = createSlice({
         state.isLoading = false;
 
         if (action.error.code === "ERR_BAD_REQUEST") {
-          console.log(action.error.code);
-
           state.items = [] as Character[];
         }
         state.error = action.error.code;

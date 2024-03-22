@@ -21,8 +21,6 @@ function FormInput() {
     await dispatch(getSearchCharactersAsync({ text }));
   };
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    console.log(event.key);
-
     if (event.key === "Escape") {
       dispatch(ITEMS_ALL_REMOVE());
       if (
