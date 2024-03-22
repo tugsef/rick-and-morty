@@ -14,6 +14,7 @@ function page() {
       <Header />
       <MultiSelect />
       <Footer />
+      <h1 className="text-3xl">CodeSondex</h1>
       <iframe src="https://codesandbox.io/p/github/tugsef/rick-and-morty/main" className="w-full h-full"></iframe>
     </div>
   );
