@@ -19,7 +19,7 @@ response döner.
 
 - Seçilen karakter listesinde odaklanan karakteri `back` tuşu siler.
 - Arama listesinde seçilen karakteri `enter` seçili karakter listesine ekler. 
-- Arama listesinde seçilen karakteri `back` seçili karakter listesiden siler.
+
 
 <details><summary><b>Case</b></summary>
 <br/>

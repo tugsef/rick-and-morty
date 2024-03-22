@@ -14,12 +14,6 @@ function page() {
       <Header />
       <MultiSelect />
       <Footer />
-      <h1 className="text-xl font-extrabold">Github</h1>
-      <iframe
-        src="https://tugsef.github.io/rick-and-morty"
-        width="100%"
-        className="h-full"
-      ></iframe>
     </div>
   );
 }
